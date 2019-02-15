@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+      <ul>
+         <li *ngFor="let value of parameterarray">
+           <a routerLink="/routeparametercomponent/{{value}}">Navigate to {{value}}</a>
+         </li>
+      </ul>  
+   </div> 
+
+  <div class="row">
+      <ul>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','1']">Navigate to 1</a>
+         </li>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','2']">Navigate to 2</a>
+         </li>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','3']">Navigate to 3</a>
+         </li>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','4']">Navigate to 4</a>
+         </li>
+      </ul>  
+   </div> 
+
+    <div class="row">
+      <ul>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','1']" [queryParams]="{'allowedit':'1'}">Navigate to 1
+            with query parameter</a>
+         </li>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','2']" [queryParams]="{'allowedit':'2'}">Navigate to 2
+            with query parameter</a>
+         </li>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','3']" [queryParams]="{'allowedit':'3'}">Navigate to 3
+            with query parameter</a>
+         </li>
+         <li>
+           <a [routerLink]="['/routeparametercomponent','4']" [queryParams]="{'allowedit':'4'}">Navigate to 4
+            with query parameter</a>
+         </li>
+      </ul>  
+   </div> 
+
+     <div class="row">
+      <ul>
+         <li>
+           <input type="button" (click)="navigate(1)" value="Navigate to 1 with query parameter programatically">
+         </li>
+         <li>
+           <input type="button" (click)="navigate(2)" value="Navigate to 2 with query parameter programatically">
+         </li>
+         <li>
+           <input type="button" (click)="navigate(3)" value="Navigate to 3 with query parameter programatically">
+         </li>
+         <li>
+           <input type="button" (click)="navigate(4)" value="Navigate to 4 with query parameter programatically">
+         </li>
+      </ul>  
+   </div> 
+
+   <div class="row">
+     <h1>The selected routed parameter {{selectedrouter.id}}</h1>
+   </div>  
+
+   <div class="row">
+      <h1>Query parameter value is {{queryparameter.value}}</h1>
+   </div>  
+   
+</div>  

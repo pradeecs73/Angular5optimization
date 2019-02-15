@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+     <div class="col-md-1">
+        <p>welcome</p>
+      </div> 
+      <div class="col-md-8">
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+      </div>
+   </div> 
+  <ul *ngFor="let userobject of user">
+    <li>
+        {{userobject.name | shorten}}
+    </li> 
+  </ul>
+</div>

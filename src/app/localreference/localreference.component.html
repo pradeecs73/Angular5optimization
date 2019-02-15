@@ -1,0 +1,21 @@
+<div class="container">
+   <div class="row">
+      <div class="form-group">
+        <label for="localreference">localreference</label>
+        <input type="text" name="username" #ServerNameInputElement>      
+      </div>
+     </div> 
+    <div class="row">
+      <div class="form-group">
+        <label for="viewchild">viewchild</label>
+        <input type="text" name="username" #ServerViewChildInputElement>      
+      </div>
+     </div> 
+    <div class="row">
+      <div class="form-group">
+        <button  class="btn btn-primary" (click)="localreference(ServerNameInputElement)">localreference</button>
+        <button  class="btn btn-primary" (click)="viewchild()">view child</button>
+      </div>  
+   </div> 
+
+</div>

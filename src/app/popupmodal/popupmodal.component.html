@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+     <div class="col-md-1">
+       <p>welcome {{loginusername}}</p>
+     </div> 
+     <div class="col-md-8">
+       <input type="text" [(ngModel)]="mytextfieldvalue" (ngModelChange)="myTextfieldvaluechange($event)">
+     </div> 
+     <div class="col-md-2">
+       <button class="btn btn-default" (click)="openPopup()">Open popup Model</button>
+       <button class="btn btn-default" (click)="changeLoginusername()">change username</button>
+     </div>    
+  </div>
+ </div> 
+
+ <div class="container-fluid">
+   <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':viewRule}">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+          <div class="Modal-header">
+            <button type="button" aria-label="Close" (click)="closePopup()">
+              <span aria-hidden="true">&times;</span>
+            </button>  
+          </div>  
+          <div class="modal-body">
+             <ul *ngFor="let userobject of user">
+              <li>
+               {{userobject.name | shorten}}
+              </li> 
+             </ul>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-12">
+                <button tupe="button" class="btn btn-default" (click)="closePopup()">Close</button>
+              </div>  
+            </div>  
+          </div>   
+       </div>  
+    </div>
+   </div>  
+ </div>  

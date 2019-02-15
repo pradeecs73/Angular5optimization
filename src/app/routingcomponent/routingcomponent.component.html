@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <ul>
+     <li>
+       <a routerLink="/form">form component</a>
+     </li>
+     <li>
+        <a routerLink="/dashboard/main">dashboard component</a>
+     </li>
+     <li>
+        <a [routerLink]="['/popup']">popup component</a>
+     </li>
+     <li>
+        <a [routerLink]="['/fileupload']">fileupload component</a>
+     </li>
+    </ul>
+   </div>
+</div>  
+
+<div class="container">
+  <div class="row">
+    <ul>
+     <li routerLinkActive >
+       <a routerLink="/form">form component</a>
+     </li>
+     <li>
+        <a routerLink="/dashboard/main">dashboard component</a>
+     </li>
+     <li>
+        <a [routerLink]="['/popup']">popup component</a>
+     </li>
+     <li>
+        <a [routerLink]="['/fileupload']">fileupload component</a>
+     </li>
+    </ul>
+   </div>
+</div>  
+
+<input type="button" value="navigate to same component" (click)="reload();">
