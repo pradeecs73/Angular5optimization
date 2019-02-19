@@ -9,15 +9,12 @@ import {FormoptimizeModule} from './formcomponent/formoptimize.module';
 import {DashboardmainoptimizeModule} from './dashboard/dashboardmainoptimize.module';
 import {ShortenpipeoptimizeModule} from './sharedmodule/shortenpipeoptimize.module';
 
-
 import { AppComponent } from './app.component';
 import {configservice} from './config.service';
 import {AuthGuard} from './auth-guard.service';
 import {AuthService} from './auth.service';
 import {observableservice} from './observable.service';
 import { LoginComponent } from './login/login.component';
-import { ParentcomponentComponent } from './parentcomponent/parentcomponent.component';
-import { ChildcomponentComponent } from './parentcomponent/childcomponent/childcomponent.component';
 import { PopupmodalComponent } from './popupmodal/popupmodal.component';
 import { RoutenotfoundComponent } from './routenotfound/routenotfound.component';
 import { ReadfromfileComponent } from './readfromfile/readfromfile.component';
@@ -39,8 +36,6 @@ export function init_app(configservice:configservice){
   declarations: [
     AppComponent,
     LoginComponent,
-    ParentcomponentComponent,
-    ChildcomponentComponent,
     PopupmodalComponent,
     RoutenotfoundComponent,
     ReadfromfileComponent,
@@ -61,7 +56,8 @@ export function init_app(configservice:configservice){
     RouteConfigModule,
     DashboardmainoptimizeModule,
     FormoptimizeModule,
-    ShortenpipeoptimizeModule
+    ShortenpipeoptimizeModule,
+   
    
   ],
   providers: [configservice,{provide:APP_INITIALIZER,useFactory:init_app,deps:[configservice],multi:true},AuthService,AuthGuard,observableservice],
