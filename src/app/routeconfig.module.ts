@@ -23,7 +23,6 @@ import {AuthGuard} from './auth-guard.service';
 {path:'fileupload',component:FileuploadComponent},
 {path:'routecomponent',component:RoutingcomponentComponent},
 {path:'routeparametercomponent/:id',component:RoutingparametercomponentComponent},
-{path:'simpleobservable',component:SimpleobservableComponent},
 {path:'observablemethod',component:ObservablemethodsComponent},
 {path:'localreference',component:LocalreferenceComponent}
 

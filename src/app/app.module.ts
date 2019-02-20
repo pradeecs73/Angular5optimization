@@ -8,6 +8,7 @@ import {RouteConfigModule} from './routeconfig.module';
 import {FormoptimizeModule} from './formcomponent/formoptimize.module';
 import {DashboardmainoptimizeModule} from './dashboard/dashboardmainoptimize.module';
 import {ShortenpipeoptimizeModule} from './sharedmodule/shortenpipeoptimize.module';
+import {CoreModule} from './coremodule/core.module';
 
 import { AppComponent } from './app.component';
 import {configservice} from './config.service';
@@ -21,9 +22,7 @@ import { ReadfromfileComponent } from './readfromfile/readfromfile.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.component';
 import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
-import { SimpleobservableComponent } from './simpleobservable/simpleobservable.component';
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
-import { CommoncomponentComponent } from './commoncomponent/commoncomponent.component';
 import { LocalreferenceComponent } from './localreference/localreference.component';
 
 
@@ -42,9 +41,7 @@ export function init_app(configservice:configservice){
     FileuploadComponent,
     RoutingcomponentComponent,
     RoutingparametercomponentComponent,
-    SimpleobservableComponent,
     ObservablemethodsComponent,
-    CommoncomponentComponent,
     LocalreferenceComponent
   ],
   imports: [
@@ -53,6 +50,7 @@ export function init_app(configservice:configservice){
     FormsModule,
     HttpModule,
     HttpClientModule,
+    CoreModule,
     RouteConfigModule,
     DashboardmainoptimizeModule,
     FormoptimizeModule,
