@@ -7,7 +7,6 @@ import { ReadfromfileComponent } from './readfromfile/readfromfile.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.component';
 import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
-import { SimpleobservableComponent } from './simpleobservable/simpleobservable.component';
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import { LocalreferenceComponent } from './localreference/localreference.component';
 import {AuthGuard} from './auth-guard.service';
