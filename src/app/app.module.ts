@@ -12,9 +12,6 @@ import {CoreModule} from './coremodule/core.module';
 
 import { AppComponent } from './app.component';
 import {configservice} from './config.service';
-import {AuthGuard} from './auth-guard.service';
-import {AuthService} from './auth.service';
-import {observableservice} from './observable.service';
 import { LoginComponent } from './login/login.component';
 import { PopupmodalComponent } from './popupmodal/popupmodal.component';
 import { RoutenotfoundComponent } from './routenotfound/routenotfound.component';
@@ -58,7 +55,7 @@ export function init_app(configservice:configservice){
    
    
   ],
-  providers: [configservice,{provide:APP_INITIALIZER,useFactory:init_app,deps:[configservice],multi:true},AuthService,AuthGuard,observableservice],
+  providers: [configservice,{provide:APP_INITIALIZER,useFactory:init_app,deps:[configservice],multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

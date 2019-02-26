@@ -1,4 +1,4 @@
-import {Routes} from '@angular/router';
+import {Routes,PreloadAllModules} from '@angular/router';
 import { NgModule,APP_INITIALIZER} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -30,7 +30,7 @@ import {AuthGuard} from './auth-guard.service';
 @NgModule({
   
   imports: [
-   RouterModule.forRoot(appRoutes)
+   RouterModule.forRoot(appRoutes,{preloadingStrategy:PreloadAllModules})
   ],
   exports:[RouterModule]
  
