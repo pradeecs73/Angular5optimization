@@ -21,6 +21,38 @@
         </div>--> 
        </div>
      </div>
+
+      <div class="row">
+      <div class="form-group">
+        <label for="school">School</label>
+        <input type="radio" name="school" [(ngModel)]="school" value="private">priavte
+       <input type="radio" name="school" [(ngModel)]="school" value="government">government
+       </div>
+     </div>
+
+     <div class="row">
+      <div class="form-group">
+        <label for="company">company</label>
+        <span *ngFor="let company of companyarray;  let i = index">
+       <input  type="checkbox" 
+          [value]="company.value" name="{{company.companyname}}" 
+          [(ngModel)]="company.checked">{{company.value}}
+        </span>  
+       </div>
+     </div>
+
+     <div class="row">
+      <div class="form-group">
+        <label for="passanger">Passenger</label>
+         <select name="passagnername" [(ngModel)]="passengertitle"  #passagnername="ngModel">
+             <option value="">select title</option>
+              <option *ngFor="let title of titleArray" [value]="title.value">
+                {{title.text}}
+              </option>
+          </select>
+       </div>
+     </div>
+
     <div class="row">
       <div class="form-group">
         <button type="submit" class="btn btn-primary" [disabled]="!f.valid">submit</button>
@@ -28,3 +60,6 @@
    </div> 
    </form>
 </div>
+
+
+
