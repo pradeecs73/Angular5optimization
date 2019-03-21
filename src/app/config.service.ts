@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http,Response} from '@angular/Http';
+import {Http,Response,Headers} from '@angular/Http';
 import {HttpClient,HttpEvent} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
@@ -32,6 +32,24 @@ export class configservice{
 
     getUrlData(){
          return this.Urldata;
+    }
+
+   getAllUsers(){
+       const headers = new Headers({});
+      
+        return this.http.get("http://localhost:3000/api/getallRecords")
+        .map(
+           (response:Response)=>{         
+              const alluserlist=response.json();
+              return alluserlist;
+           }
+        );
+
+   }
+
+   login(saveRequestUsers:any)
+    {
+       return this.http.post("http://localhost:3000/signin",saveRequestUsers);
     }
 
     /*fileupload(file:File[]):Observable<HttpEvent<{}>>

@@ -9,12 +9,12 @@ import {configservice} from './../config.service';
 export class DashboardComponent implements OnInit {
   checkvariable:any;
 
-  constructor(configservice:configservice) { 
+  constructor(private configservice:configservice) { 
       this.checkvariable=configservice.getInitialSampleData();
   }
 
   ngOnInit() {
-    
+  
   }
 
 }

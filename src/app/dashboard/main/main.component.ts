@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Injectable} from '@angular/core';
 import {Router} from '@angular/router';
+import {configservice} from './../../config.service';
+
+
 
 @Component({
   selector: 'app-main',
@@ -7,14 +10,28 @@ import {Router} from '@angular/router';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  user:any=[{"name":"pradeep"},{"name":"prasad"},{"name":"suresh"},{"name":"ramesh"}];
+ // user:any=[{"name":"pradeep"},{"name":"prasad"},{"name":"suresh"},{"name":"ramesh"}];
+  user:any=[];
   someArray:any=[1,2,3,4,5];
-  constructor(private router:Router) { }
+  alluserlist:any;
+  constructor(private router:Router,private configservice:configservice) { 
+
+
+  }
 
   ngOnInit() {
     this.someArray.forEach((item,index)=>{
         console.log(item);
     });
+
+    this.configservice.getAllUsers() 
+    .subscribe((alluserlist:any)=>
+    {
+       this.user=alluserlist;
+    },
+    (error)=>{console.log(error)}
+    );
+
   }
 
   /*saveUsers(){
