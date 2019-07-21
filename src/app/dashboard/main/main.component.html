@@ -14,4 +14,11 @@
         {{userobject.name | shorten}}
     </li> 
   </ul>
+<p> This is static data </p>
+   <ul *ngFor="let userfilterobjectuser of userarray | filterarray">
+    <li>
+        {{userfilterobjectuser.name}}
+    </li> 
+  </ul>
+ 
 </div>

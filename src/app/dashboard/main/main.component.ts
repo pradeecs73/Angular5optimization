@@ -10,7 +10,7 @@ import {configservice} from './../../config.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
- // user:any=[{"name":"pradeep"},{"name":"prasad"},{"name":"suresh"},{"name":"ramesh"}];
+  userarray:any=[{"name":"pradeep"},{"name":"prasad"},{"name":"suresh"},{"name":"ramesh"}];
   user:any=[];
   someArray:any=[1,2,3,4,5];
   alluserlist:any;
