@@ -14,6 +14,7 @@ import {Subscription} from 'rxjs/Subscription';
 export class CommoncomponentComponent implements OnInit {
 
   receiveid:any;
+  message:any;
 
   constructor(private observableservice:observableservice) { }
 
@@ -22,6 +23,8 @@ export class CommoncomponentComponent implements OnInit {
     this.observableservice.useridreceivedfromcomponent.subscribe((id:String)=>{
          this.receiveid=id;
     });
+
+    this.observableservice.currentMessage.subscribe(message => this.message = message)
 
   }
 

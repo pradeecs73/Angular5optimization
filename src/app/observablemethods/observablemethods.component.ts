@@ -4,6 +4,7 @@ import {Observer} from 'rxjs/Observer';
 import 'rxjs/Rx';
 import {observableservice} from './../observable.service';
 import {Subscription} from 'rxjs/Subscription';
+import {Router,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-observablemethods',
@@ -13,7 +14,7 @@ import {Subscription} from 'rxjs/Subscription';
 export class ObservablemethodsComponent implements OnInit,OnDestroy {
     customsubscription:Subscription;
 
-  constructor(private observableservice:observableservice) { }
+  constructor(private observableservice:observableservice,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit() {
 
@@ -49,6 +50,8 @@ export class ObservablemethodsComponent implements OnInit,OnDestroy {
 
   passId(id:String){
      this.observableservice.useridreceivedfromcomponent.next(id);
+      this.observableservice.changeMessage("Hello from Sibling")
+     this.router.navigate(['/popup'],{relativeTo:this.route});
   }
 
   ngOnDestroy() {

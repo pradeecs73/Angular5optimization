@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
      <div class="col-md-1">
-       <p>welcome {{loginusername}}</p>
+       <p>welcome {{loginusername}}{{message}}
+       </p>
      </div> 
      <div class="col-md-8">
        <input type="text" [(ngModel)]="mytextfieldvalue" (ngModelChange)="myTextfieldvaluechange($event)">
