@@ -30,7 +30,7 @@ import {AuthGuard} from './auth-guard.service';
 @NgModule({
   
   imports: [
-   RouterModule.forRoot(appRoutes,{preloadingStrategy:PreloadAllModules})
+   RouterModule.forRoot(appRoutes,{preloadingStrategy:PreloadAllModules,useHash:true})
   ],
   exports:[RouterModule]
  

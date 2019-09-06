@@ -21,6 +21,7 @@ export class PopupmodalComponent implements OnInit,AfterViewInit,AfterContentChe
   constructor(private observableservice:observableservice) { }
 
   ngOnInit() {
+   
        this.observableservice.currentMessage.subscribe(message => this.message = message)
 
   }
