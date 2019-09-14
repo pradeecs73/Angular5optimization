@@ -35,6 +35,7 @@ export class configservice{
     }
 
    getAllUsers(){
+       console.log("inside get all records calling fifth time");
        const headers = new Headers({});
       
         return this.http.get("http://localhost:3000/api/getallRecords")
