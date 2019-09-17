@@ -9,6 +9,7 @@ import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.c
 import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import { LocalreferenceComponent } from './localreference/localreference.component';
+import { CorouselComponent } from './corousel/corousel.component';
 import {AuthGuard} from './auth-guard.service';
 
 
@@ -23,6 +24,7 @@ import {AuthGuard} from './auth-guard.service';
 {path:'routecomponent',component:RoutingcomponentComponent},
 {path:'routeparametercomponent/:id',component:RoutingparametercomponentComponent},
 {path:'observablemethod',component:ObservablemethodsComponent},
+{path:'corousel',component:CorouselComponent},
 {path:'localreference',component:LocalreferenceComponent}
 
 ];

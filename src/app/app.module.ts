@@ -21,6 +21,7 @@ import { RoutingcomponentComponent } from './routingcomponent/routingcomponent.c
 import { RoutingparametercomponentComponent } from './routingparametercomponent/routingparametercomponent.component';
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import { LocalreferenceComponent } from './localreference/localreference.component';
+import { CorouselComponent } from './corousel/corousel.component';
 
 
 export function init_app(configservice:configservice){
@@ -39,7 +40,8 @@ export function init_app(configservice:configservice){
     RoutingcomponentComponent,
     RoutingparametercomponentComponent,
     ObservablemethodsComponent,
-    LocalreferenceComponent
+    LocalreferenceComponent,
+    CorouselComponent
   ],
   imports: [
    

@@ -74,7 +74,7 @@ export class MainComponent implements OnInit {
   }
 
   changerating1(){
-    this.ratingvalue=3;
+    this.ratingvalue=2;
   }
 
 }
