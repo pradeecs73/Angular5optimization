@@ -15,10 +15,13 @@ export class MainComponent implements OnInit {
   user:any=[];
   someArray:any=[1,2,3,4,5];
   alluserlist:any;
-  mysample:any="<b>sample for</b> <h1><u>eerert</u></h1>";
+  mysample:any="<b>sample for</b> <h1><u>eerert</u></h1><a href='https://www.google.com'>hyper</a>";
   ratingvalue:any=4;
 
   constructor(private router:Router,private configservice:configservice) { 
+   
+     console.log(router.routerState.snapshot.url);
+   
 
 
   }
@@ -73,8 +76,12 @@ export class MainComponent implements OnInit {
 
   }
 
-  changerating1(){
-    this.ratingvalue=2;
+  refresh(){
+    this.router.navigateByUrl('localreference',{skipLocationChange:true}).then(()=>{
+        this.router.navigate(['/dashboard/main']);
+    });
+
   }
+
 
 }

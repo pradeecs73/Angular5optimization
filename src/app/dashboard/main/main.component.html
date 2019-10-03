@@ -26,9 +26,9 @@
 <div *ngFor="let userobject of user">
 
   <div class="stars-outer">
-          <div class="stars-inner"[ngStyle]="{'width':changerating(ratingvalue)}" id="p1"></div>
+          <div class="stars-inner" [ngStyle]="{'width':changerating(ratingvalue)}" id="p1"></div>
   </div>        
   
  </div>  
   
-  <button class="btn btn-primary" (click)="changerating1()">change Rating</button>
+  <button class="btn btn-primary" (click)="refresh()">refresh</button>
