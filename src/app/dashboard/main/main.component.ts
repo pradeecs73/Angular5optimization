@@ -17,6 +17,7 @@ export class MainComponent implements OnInit {
   alluserlist:any;
   mysample:any="<b>sample for</b> <h1><u>eerert</u></h1><a href='https://www.google.com'>hyper</a>";
   ratingvalue:any=4;
+  myLocationStatus:any;
 
   constructor(private router:Router,private configservice:configservice) { 
    
@@ -38,7 +39,27 @@ export class MainComponent implements OnInit {
     },
     (error)=>{console.log(error)}
     );
+   
+     this.myLocationStatus=this.getLocationStatus();
 
+  }
+
+  getLocationStatus()
+  {
+      navigator.geolocation.getCurrentPosition(function(position){
+          alert("1");
+      },function(error){
+          if(error.code == error.PERMISSION_DENIED)
+          {
+             alert("2");
+          }
+           
+      },{maximumAge:0,timeout:1000,enableHighAccuracy:true});
+      
+  }
+
+  checkLocation(){
+    this.getLocationStatus();
   }
 
   /*saveUsers(){
