@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild,ElementRef} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-localreference',
@@ -6,20 +6,17 @@ import { Component, OnInit ,ViewChild,ElementRef} from '@angular/core';
   styleUrls: ['./localreference.component.css']
 })
 export class LocalreferenceComponent implements OnInit {
+  @ViewChild('ServerViewChildInputElement') serverviewchildinputelement: ElementRef;
 
-  @ViewChild("ServerViewChildInputElement") serverviewchildinputelement:ElementRef;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  localreference(nameInput: HTMLInputElement) {
+    console.log(nameInput.value);
   }
 
-  localreference(nameInput:HTMLInputElement){
-    console.log(nameInput.value)
+  viewchild() {
+    console.log(this.serverviewchildinputelement.nativeElement.value);
   }
-
-  viewchild(){
-     console.log(this.serverviewchildinputelement.nativeElement.value);
-  }
-
 }

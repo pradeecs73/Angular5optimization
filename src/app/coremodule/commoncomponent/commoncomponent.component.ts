@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {Observer} from 'rxjs/Observer';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 import 'rxjs/Rx';
-import {observableservice} from './../../observable.service';
-import {Subscription} from 'rxjs/Subscription';
-
+import { observableservice } from './../../observable.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-commoncomponent',
@@ -12,20 +11,16 @@ import {Subscription} from 'rxjs/Subscription';
   styleUrls: ['./commoncomponent.component.css']
 })
 export class CommoncomponentComponent implements OnInit {
+  receiveid: any;
+  message: any;
 
-  receiveid:any;
-  message:any;
-
-  constructor(private observableservice:observableservice) { }
+  constructor(private observableservice: observableservice) {}
 
   ngOnInit() {
-
-    this.observableservice.useridreceivedfromcomponent.subscribe((id:String)=>{
-         this.receiveid=id;
+    this.observableservice.useridreceivedfromcomponent.subscribe((id: String) => {
+      this.receiveid = id;
     });
 
-    this.observableservice.currentMessage.subscribe(message => this.message = message)
-
+    this.observableservice.currentMessage.subscribe(message => (this.message = message));
   }
-
 }

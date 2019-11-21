@@ -1,5 +1,5 @@
-import { Component, OnInit ,AfterViewInit} from '@angular/core';
-declare var $:any;
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-corousel',
@@ -7,14 +7,11 @@ declare var $:any;
   styleUrls: ['./corousel.component.css']
 })
 export class CorouselComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    $('.carousel').carousel();
   }
-
-  ngAfterViewInit(){
-    $(".carousel").carousel();
-  }
-
 }

@@ -8,9 +8,8 @@ describe('ReadfromfileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReadfromfileComponent ]
-    })
-    .compileComponents();
+      declarations: [ReadfromfileComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

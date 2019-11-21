@@ -1,69 +1,61 @@
-import {Injectable} from '@angular/core';
-import {Http,Response,Headers} from '@angular/Http';
-import {HttpClient,HttpEvent} from '@angular/common/http';
-import {Observable} from 'rxjs/Observable';
+import { Injectable } from '@angular/core';
+import { Http, Response, Headers } from '@angular/Http';
+import { HttpClient, HttpEvent } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class configservice{
-    private Urldata:any;
-    private checkvariable:any;
-    constructor(private http:Http){
-    }
+export class configservice {
+  private Urldata: any;
+  private checkvariable: any;
+  constructor(private http: Http) {}
 
-    initializeURL()
-    {
-        return this.http.get("./../assets/constants.json")
-        .map(
-            (jsonurl:any)=>
-            jsonurl        
-        ).toPromise()
-         .then((data:any) => {
-          this.checkvariable="sample user loading from app initializer";
-          this.Urldata=data.json();
-         }).catch((err:any) => Promise.resolve());
-    }
+  initializeURL() {
+    return this.http
+      .get('./../assets/constants.json')
+      .map((jsonurl: any) => jsonurl)
+      .toPromise()
+      .then((data: any) => {
+        this.checkvariable = 'sample user loading from app initializer';
+        this.Urldata = data.json();
+      })
+      .catch((err: any) => Promise.resolve());
+  }
 
-    getInitialSampleData()
-    {
-       return this.checkvariable;
-    }
+  getInitialSampleData() {
+    return this.checkvariable;
+  }
 
-    getUrlData(){
-         return this.Urldata;
-    }
+  getUrlData() {
+    return this.Urldata;
+  }
 
-   getAllUsers(){
-       console.log("inside get all records calling fifth time");
-       const headers = new Headers({});
-      
-        return this.http.get("http://localhost:3000/api/getallRecords")
-        .map(
-           (response:Response)=>{         
-              const alluserlist=response.json();
-              return alluserlist;
-           }
-        );
+  getAllUsers() {
+    console.log('inside get all records calling fifth time');
+    const headers = new Headers({});
 
-   }
+    return this.http.get('http://localhost:3000/api/getallRecords').map((response: Response) => {
+      const alluserlist = response.json();
+      return alluserlist;
+    });
+  }
 
-   login(saveRequestUsers:any)
-    {
-       return this.http.post("http://localhost:3000/signin",saveRequestUsers);
-    }
+  login(saveRequestUsers: any) {
+    return this.http.post('http://localhost:3000/signin', saveRequestUsers);
+  }
 
-    /*fileupload(file:File[]):Observable<HttpEvent<{}>>
+  /*fileupload(file:File[]):Observable<HttpEvent<{}>>
     {
       return "sampledata";
     }*/
 
-    /*saveUsersList(saveRequestUsers:any)
+  /*saveUsersList(saveRequestUsers:any)
     {
        return this.http.post(this.urlobjectfromfile.saveuserlist,saveRequestUsers);
     }*/
 
-    /*getAllUsers(){
+  /*getAllUsers(){
         return this.http.get(this.urlobjectfromfile.getallusers)
         .map(
            (response:Response)=>{
@@ -73,8 +65,7 @@ export class configservice{
         );
     }*/
 
-   /*deletedocument(deletedocumentobject){
+  /*deletedocument(deletedocumentobject){
       return this.http.put(this.urlobjectfromfile.deletedocument,deletedocumentobject);
    }*/
-
 }

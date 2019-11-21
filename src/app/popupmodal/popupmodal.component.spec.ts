@@ -8,9 +8,8 @@ describe('PopupmodalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PopupmodalComponent ]
-    })
-    .compileComponents();
+      declarations: [PopupmodalComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

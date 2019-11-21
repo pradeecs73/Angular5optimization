@@ -8,9 +8,8 @@ describe('CommoncomponentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CommoncomponentComponent ]
-    })
-    .compileComponents();
+      declarations: [CommoncomponentComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

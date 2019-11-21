@@ -6,22 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parentcomponent.component.css']
 })
 export class ParentcomponentComponent implements OnInit {
-  valueforthechild:any="mysore";
-  valuefromthechild:any;
+  valueforthechild: any = 'mysore';
+  valuefromthechild: any;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  myChildData(childdata: String) {
+    this.valuefromthechild = childdata;
   }
 
-  myChildData(childdata:String)
-  {
-    this.valuefromthechild=childdata;
+  changeValuefromtheparent() {
+    this.valueforthechild = 'Bangalore';
   }
-
-  changeValuefromtheparent()
-  {
-    this.valueforthechild="Bangalore";
-  }
-
 }

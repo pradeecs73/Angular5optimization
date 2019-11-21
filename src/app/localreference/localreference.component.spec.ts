@@ -8,9 +8,8 @@ describe('LocalreferenceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LocalreferenceComponent ]
-    })
-    .compileComponents();
+      declarations: [LocalreferenceComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

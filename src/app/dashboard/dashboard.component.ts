@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {configservice} from './../config.service';
+import { configservice } from './../config.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,14 +7,11 @@ import {configservice} from './../config.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  checkvariable:any;
+  checkvariable: any;
 
-  constructor(private configservice:configservice) { 
-      this.checkvariable=configservice.getInitialSampleData();
+  constructor(private configservice: configservice) {
+    this.checkvariable = configservice.getInitialSampleData();
   }
 
-  ngOnInit() {
-  
-  }
-
+  ngOnInit() {}
 }

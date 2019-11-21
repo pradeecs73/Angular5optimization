@@ -1,16 +1,13 @@
-import {PipeTransform,Pipe,Injectable} from '@angular/core';
+import { PipeTransform, Pipe, Injectable } from '@angular/core';
 
 @Pipe({
-    name:'filterarray'
+  name: 'filterarray'
 })
-
 @Injectable()
-export class FilterarrayPipe implements PipeTransform
-{
-    transform(incomingarray:any)
-    {
-        return incomingarray.filter(arrayobject =>{
-            return (arrayobject.name == "pradeep" || arrayobject.name == "prasad")
-        });
-    }
+export class FilterarrayPipe implements PipeTransform {
+  transform(incomingarray: any) {
+    return incomingarray.filter(arrayobject => {
+      return arrayobject.name == 'pradeep' || arrayobject.name == 'prasad';
+    });
+  }
 }

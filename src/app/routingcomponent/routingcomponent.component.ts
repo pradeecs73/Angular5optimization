@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router,ActivatedRoute} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-routingcomponent',
@@ -7,15 +7,11 @@ import {Router,ActivatedRoute} from '@angular/router';
   styleUrls: ['./routingcomponent.component.css']
 })
 export class RoutingcomponentComponent implements OnInit {
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
-  constructor(private router:Router,private route:ActivatedRoute) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  reload() {
+    this.router.navigate(['/routecomponent'], { relativeTo: this.route });
   }
-
-  reload()
-  {
-    this.router.navigate(['/routecomponent'],{relativeTo:this.route});
-  }
-
 }

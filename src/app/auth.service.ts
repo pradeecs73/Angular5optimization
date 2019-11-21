@@ -1,20 +1,15 @@
-import {Injectable} from '@angular/core';
-import {Http,Response} from '@angular/Http';
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/Http';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/toPromise';
 
-export class AuthService
-{
-    myLoginValue:any;
+export class AuthService {
+  myLoginValue: any;
 
-    constructor()
-    {
+  constructor() {}
 
-    }
-
-    isAuthenticated()
-    {
-        this.myLoginValue=localStorage.getItem("loggedIn");
-        return(this.myLoginValue == "1");        
-    }
+  isAuthenticated() {
+    this.myLoginValue = localStorage.getItem('loggedIn');
+    return this.myLoginValue == '1';
+  }
 }
