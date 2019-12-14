@@ -22,6 +22,7 @@ import { RoutingparametercomponentComponent } from './routingparametercomponent/
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import { LocalreferenceComponent } from './localreference/localreference.component';
 import { CorouselComponent } from './corousel/corousel.component';
+import { DomoptimizeComponent } from './domoptimize/domoptimize.component';
 
 export function init_app(configservice: configservice) {
   return () => configservice.initializeURL();
@@ -39,7 +40,8 @@ export function init_app(configservice: configservice) {
     RoutingparametercomponentComponent,
     ObservablemethodsComponent,
     LocalreferenceComponent,
-    CorouselComponent
+    CorouselComponent,
+    DomoptimizeComponent
   ],
   imports: [
     BrowserModule,

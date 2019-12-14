@@ -11,6 +11,7 @@ import { ObservablemethodsComponent } from './observablemethods/observablemethod
 import { LocalreferenceComponent } from './localreference/localreference.component';
 import { CorouselComponent } from './corousel/corousel.component';
 import { AuthGuard } from './auth-guard.service';
+import { DomoptimizeComponent } from './domoptimize/domoptimize.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'routeparametercomponent/:id', component: RoutingparametercomponentComponent },
   { path: 'observablemethod', component: ObservablemethodsComponent },
   { path: 'corousel', component: CorouselComponent },
+   { path: 'domoptimize', component: DomoptimizeComponent },
   { path: 'localreference', component: LocalreferenceComponent }
 ];
 
