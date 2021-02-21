@@ -26,9 +26,18 @@ export class MainComponent implements OnInit {
       console.log(item);
     });
 
-    this.configservice.getAllUsers().subscribe(
+   /* this.configservice.getAllUsers().subscribe(
       (alluserlist: any) => {
         this.user = alluserlist;
+      },
+      error => {
+        console.log(error);
+      }
+    );*/
+
+    this.configservice.getallposts().subscribe(
+      (posts: any) => {
+        console.log(posts);
       },
       error => {
         console.log(error);

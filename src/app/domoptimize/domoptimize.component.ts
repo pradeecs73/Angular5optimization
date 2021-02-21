@@ -7,6 +7,7 @@ import { Component, OnInit,ChangeDetectorRef,AfterViewInit } from '@angular/core
 })
 export class DomoptimizeComponent implements OnInit,AfterViewInit {
     mysample: any = "<b>sample for</b> <span style='color:red'><h1><u>eerert</u></h1></span><a href='https://www.google.com'>hyper</a>";
+    name:any="abhi";
   constructor(private changescdr:ChangeDetectorRef) { }
 
   ngOnInit() {
@@ -14,7 +15,13 @@ export class DomoptimizeComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit(){
-     this.changescdr.detectChanges();
+      this.changescdr.detectChanges();
+  }
+
+  changeName()
+  {
+
+    this.name="raki";
   }
 
 }

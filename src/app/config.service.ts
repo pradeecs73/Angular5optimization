@@ -9,7 +9,7 @@ import 'rxjs/add/operator/toPromise';
 export class configservice {
   private Urldata: any;
   private checkvariable: any;
-  constructor(private http: Http) {}
+  constructor(private http: Http,private HttpClient: HttpClient) {}
 
   initializeURL() {
     return this.http
@@ -43,6 +43,13 @@ export class configservice {
 
   login(saveRequestUsers: any) {
     return this.http.post('http://localhost:3000/signin', saveRequestUsers);
+  }
+
+  getallposts() {
+    return this.HttpClient.get('https://jsonplaceholder.typicode.com/posts').map((response: Response) => {
+      const alluserlist = response.json();
+      return alluserlist;
+    });
   }
 
   /*fileupload(file:File[]):Observable<HttpEvent<{}>>

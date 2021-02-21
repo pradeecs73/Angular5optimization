@@ -11,3 +11,4 @@ export class FilterarrayPipe implements PipeTransform {
     });
   }
 }
+

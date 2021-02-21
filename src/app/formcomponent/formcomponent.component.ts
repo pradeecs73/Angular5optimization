@@ -24,6 +24,7 @@ export class FormcomponentComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit(form: NgForm) {
+   
     console.log(form);
     console.log(this.companyarray);
   }

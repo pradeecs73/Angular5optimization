@@ -3,3 +3,5 @@
 </p>
 
   <div [innerHTML]="mysample | parsehtml"></div>
+  <p *ngIf="name == 'abhi'">same name</p>
+  <button (click)="changeName()">change name</button>

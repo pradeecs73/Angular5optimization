@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     this.loginrequest.email = 'abhijith@gmail.com';
     this.loginrequest.password = 'abhijith';
 
-    /*if(form.value.username == "012345678910" && form.value.password == "012345678910")
+    if(form.value.username == "012345678910" && form.value.password == "012345678910")
     {
       localStorage.setItem("loggedIn","1");
       this.router.navigate(['/dashboard/main']);
@@ -32,9 +32,9 @@ export class LoginComponent implements OnInit {
     else
     {
       alert("wrong credentials");
-    }*/
+    }
 
-    this.configservice.login(this.loginrequest).subscribe(
+    /*this.configservice.login(this.loginrequest).subscribe(
       response => {
         if (response.json().result < 1) {
           alert('wrong credentials');
@@ -46,6 +46,6 @@ export class LoginComponent implements OnInit {
       error => {
         console.log(error);
       }
-    );
+    );*/
   }
 }

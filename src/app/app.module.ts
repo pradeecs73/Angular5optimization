@@ -3,7 +3,7 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/Http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouteConfigModule } from './routeconfig.module';
 import { FormoptimizeModule } from './formcomponent/formoptimize.module';
 import { DashboardmainoptimizeModule } from './dashboard/dashboardmainoptimize.module';
@@ -23,6 +23,7 @@ import { ObservablemethodsComponent } from './observablemethods/observablemethod
 import { LocalreferenceComponent } from './localreference/localreference.component';
 import { CorouselComponent } from './corousel/corousel.component';
 import { DomoptimizeComponent } from './domoptimize/domoptimize.component';
+import { InterceptService} from './interceptor/httpconfig.interceptor';
 
 export function init_app(configservice: configservice) {
   return () => configservice.initializeURL();
@@ -54,7 +55,8 @@ export function init_app(configservice: configservice) {
     FormoptimizeModule,
     ShortenpipeoptimizeModule
   ],
-  providers: [configservice, { provide: APP_INITIALIZER, useFactory: init_app, deps: [configservice], multi: true }],
+  providers: [configservice, { provide: APP_INITIALIZER, useFactory: init_app, deps: [configservice], multi: true }
+  ,{provide: HTTP_INTERCEPTORS, useClass: InterceptService,  multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
