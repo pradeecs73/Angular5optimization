@@ -24,6 +24,7 @@ import { LocalreferenceComponent } from './localreference/localreference.compone
 import { CorouselComponent } from './corousel/corousel.component';
 import { DomoptimizeComponent } from './domoptimize/domoptimize.component';
 import { InterceptService} from './interceptor/httpconfig.interceptor';
+import { ChangeTextDirective } from './directives/changetext.directive';
 
 export function init_app(configservice: configservice) {
   return () => configservice.initializeURL();
@@ -42,7 +43,8 @@ export function init_app(configservice: configservice) {
     ObservablemethodsComponent,
     LocalreferenceComponent,
     CorouselComponent,
-    DomoptimizeComponent
+    DomoptimizeComponent,
+    ChangeTextDirective
   ],
   imports: [
     BrowserModule,

@@ -46,8 +46,8 @@ export class configservice {
   }
 
   getallposts() {
-    return this.HttpClient.get('https://jsonplaceholder.typicode.com/posts').map((response: Response) => {
-      const alluserlist = response.json();
+    return this.HttpClient.get('https://jsonplaceholder.typicode.com/posts').map((response:any) => {
+      const alluserlist = response;
       return alluserlist;
     });
   }
