@@ -2,5 +2,5 @@
 {{ valuefromthechild }}-value from the child component
 <button class="btn btn default" (click)="changeValuefromtheparent()">change value to child component</button>
 <br /><br />
-<app-childcomponent [valuefromtheparent]="valueforthechild" (valuefromthechild)="myChildData($event)"></app-childcomponent>
+<app-childcomponent name1="pradeep" [valuefromtheparent]="valueforthechild" (valuefromthechild)="myChildData($event)"></app-childcomponent>
 <router-outlet></router-outlet>

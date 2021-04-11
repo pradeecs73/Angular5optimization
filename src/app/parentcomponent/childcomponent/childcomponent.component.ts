@@ -21,6 +21,7 @@ export class ChildcomponentComponent implements OnInit {
   }
 
   passdata(childdata: String) {
+    alert("1")
     this.valuefromthechild.emit(childdata);
   }
 }

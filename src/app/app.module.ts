@@ -22,6 +22,8 @@ import { RoutingparametercomponentComponent } from './routingparametercomponent/
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import { LocalreferenceComponent } from './localreference/localreference.component';
 import { CorouselComponent } from './corousel/corousel.component';
+import { HelloComponent } from './hello/hello.component';
+import { Hello1Component } from './hello1/hello1.component';
 import { DomoptimizeComponent } from './domoptimize/domoptimize.component';
 import { InterceptService} from './interceptor/httpconfig.interceptor';
 import { ChangeTextDirective } from './directives/changetext.directive';
@@ -44,7 +46,9 @@ export function init_app(configservice: configservice) {
     LocalreferenceComponent,
     CorouselComponent,
     DomoptimizeComponent,
-    ChangeTextDirective
+    ChangeTextDirective,
+    HelloComponent,
+    Hello1Component
   ],
   imports: [
     BrowserModule,

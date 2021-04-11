@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
+import { ChildcomponentComponent } from './childcomponent/childcomponent.component';
 
 @Component({
   selector: 'app-parentcomponent',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parentcomponent.component.css']
 })
 export class ParentcomponentComponent implements OnInit {
+
   valueforthechild: any = 'mysore';
   valuefromthechild: any;
 
@@ -16,6 +18,7 @@ export class ParentcomponentComponent implements OnInit {
   myChildData(childdata: String) {
     this.valuefromthechild = childdata;
   }
+
 
   changeValuefromtheparent() {
     this.valueforthechild = 'Bangalore';

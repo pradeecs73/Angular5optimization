@@ -1,5 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style = "text-align:center">
+    <app-hello (valuefromthechild)="myChildData($event)" [name]="name" ></app-hello>
+    <app-hello1 [child2data]="child2data"></app-hello1>
+    <p #pRef>
+        Start editing to see some magic happen :)
+      </p>
     <span appChangeText >Welcome to directive sample</span>
  </div>
 <router-outlet></router-outlet>

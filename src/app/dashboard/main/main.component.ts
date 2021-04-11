@@ -50,11 +50,11 @@ export class MainComponent implements OnInit {
   getLocationStatus() {
     navigator.geolocation.getCurrentPosition(
       function(position) {
-        alert('1');
+
       },
       function(error) {
         if (error.code == error.PERMISSION_DENIED) {
-          alert('2');
+
         }
       },
       { maximumAge: 0, timeout: 1000, enableHighAccuracy: true }
