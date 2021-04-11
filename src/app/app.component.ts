@@ -1,4 +1,4 @@
-import { Component ,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
+import { Component ,ViewChild,AfterViewInit,ElementRef, ContentChild,AfterContentInit} from '@angular/core';
 import { HelloComponent } from './hello/hello.component';
 import { Hello1Component } from './hello1/hello1.component';
 
@@ -15,6 +15,7 @@ export class AppComponent implements AfterViewInit{
   @ViewChild(HelloComponent) hello: HelloComponent;
   @ViewChild('pRef') pRef: ElementRef;
   @ViewChild(Hello1Component) hello1: Hello1Component;
+
 
   ngAfterViewInit(){
     console.log(this.pRef.nativeElement.innerHTML); 

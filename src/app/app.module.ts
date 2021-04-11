@@ -24,6 +24,7 @@ import { LocalreferenceComponent } from './localreference/localreference.compone
 import { CorouselComponent } from './corousel/corousel.component';
 import { HelloComponent } from './hello/hello.component';
 import { Hello1Component } from './hello1/hello1.component';
+import { Hello2Component } from './hello2/hello2.component';
 import { DomoptimizeComponent } from './domoptimize/domoptimize.component';
 import { InterceptService} from './interceptor/httpconfig.interceptor';
 import { ChangeTextDirective } from './directives/changetext.directive';
@@ -48,7 +49,8 @@ export function init_app(configservice: configservice) {
     DomoptimizeComponent,
     ChangeTextDirective,
     HelloComponent,
-    Hello1Component
+    Hello1Component,
+    Hello2Component
   ],
   imports: [
     BrowserModule,
