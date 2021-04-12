@@ -60,7 +60,6 @@ export function init_app(configservice: configservice) {
     CoreModule,
     RouteConfigModule,
     DashboardmainoptimizeModule,
-    FormoptimizeModule,
     ShortenpipeoptimizeModule
   ],
   providers: [configservice, { provide: APP_INITIALIZER, useFactory: init_app, deps: [configservice], multi: true }

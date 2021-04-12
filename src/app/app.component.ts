@@ -1,4 +1,4 @@
-import { Component ,ViewChild,AfterViewInit,ElementRef, ContentChild,AfterContentInit} from '@angular/core';
+import { Component ,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
 import { HelloComponent } from './hello/hello.component';
 import { Hello1Component } from './hello1/hello1.component';
 

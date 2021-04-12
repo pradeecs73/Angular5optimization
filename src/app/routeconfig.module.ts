@@ -24,8 +24,10 @@ const appRoutes: Routes = [
   { path: 'routeparametercomponent/:id', component: RoutingparametercomponentComponent },
   { path: 'observablemethod', component: ObservablemethodsComponent },
   { path: 'corousel', component: CorouselComponent },
-   { path: 'domoptimize', component: DomoptimizeComponent },
-  { path: 'localreference', component: LocalreferenceComponent }
+  { path: 'domoptimize', component: DomoptimizeComponent },
+  { path: 'form', loadChildren: './formcomponent/formoptimize.module#FormoptimizeModule' },
+  { path: 'localreference', component: LocalreferenceComponent },
+ 
 ];
 
 @NgModule({

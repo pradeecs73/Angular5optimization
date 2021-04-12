@@ -13,7 +13,8 @@ const dashboardmainRoutes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     children: [{ path: 'main', component: MainComponent }]
-  }
+  },
+  { path: '**', component: RoutenotfoundComponent }
 ];
 
 @NgModule({
