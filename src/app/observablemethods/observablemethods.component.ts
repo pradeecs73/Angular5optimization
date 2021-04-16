@@ -28,11 +28,11 @@ export class ObservablemethodsComponent implements OnInit, OnDestroy {
         observerobject.next([1,2,3,4]);   
       }, 2000);
 
-      /*setTimeout(() => {
+      setTimeout(() => {
         observerobject.next('second package');
-      }, 4000);*/
+      }, 4000);
 
-      /*setTimeout(()=>{
+     /* setTimeout(()=>{
          observerobject.error("this does not work");
       },4000);*/
 
@@ -43,38 +43,7 @@ export class ObservablemethodsComponent implements OnInit, OnDestroy {
 
     this.customsubscription = myobservable.subscribe(
       (data:any) => {
-        const myobservabledata=(Observable.of(1,2,3,4));
-        const source = Observable.from([
-          { name: 'Joe', age: 30 },
-          { name: 'Frank', age: 20 },
-          { name: 'Ryan', age: 50 }
-        ]);
-
-        const source1 = Observable.from([
-          { name1: 'Joe', age: 30 },
-          { name1: 'Frank', age: 20 },
-          { name1: 'Ryan', age: 50 }
-        ]).pipe(share());
-
-        const example = source.pipe(
-          switchMap(mydata => {
-
-            return source1.pipe(
-              tap(mydata1=>{
-                console.log(mydata);
-                console.log(mydata1);
-              })
-            )
-          
-          }));
-     
-      example.subscribe();
-        
-        myobservable.pipe(
-           map((x:any )=> x * x)(myobservabledata).subscribe((v) => console.log(`value: ${v}`)),
-           first()(myobservabledata).subscribe((v) => console.log(`firstvalue: ${v}`))
-        );  
-
+          console.log(data);
       },
       (error: String) => {
         console.log(error);
