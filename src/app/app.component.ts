@@ -1,6 +1,7 @@
 import { Component ,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
 import { HelloComponent } from './hello/hello.component';
 import { Hello1Component } from './hello1/hello1.component';
+import {Event,NavigationEnd,NavigationStart,Router} from '@angular/router';
 
 
 @Component({
@@ -15,6 +16,23 @@ export class AppComponent implements AfterViewInit{
   @ViewChild(HelloComponent) hello: HelloComponent;
   @ViewChild('pRef') pRef: ElementRef;
   @ViewChild(Hello1Component) hello1: Hello1Component;
+
+  constructor(private router: Router) {
+         router.events.subscribe((routerEvent:Event)=>{
+
+          if(routerEvent instanceof NavigationStart){
+
+          }
+
+          if(routerEvent instanceof NavigationEnd)
+          {
+            
+          }
+           
+        
+         });
+  }
+
 
 
   ngAfterViewInit(){
