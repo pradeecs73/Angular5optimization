@@ -25,7 +25,7 @@ const appRoutes: Routes = [
   { path: 'observablemethod', component: ObservablemethodsComponent },
   { path: 'corousel', component: CorouselComponent },
   { path: 'domoptimize', component: DomoptimizeComponent },
-  { path: 'form', loadChildren: './formcomponent/formoptimize.module#FormoptimizeModule' },
+  { path: 'form', loadChildren: './formcomponent/formoptimize.module#FormoptimizeModule'},
   { path: 'localreference', component: LocalreferenceComponent },
  
 ];

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { HostListener,HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-formcomponent',
@@ -7,6 +8,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./formcomponent.component.css']
 })
 export class FormcomponentComponent implements OnInit {
+
+  @ViewChild('f') templatedrivenformstatus: NgForm;
+
   userNamePattern = '^[0-9]{9}$';
   school = 'government';
   companyarray: any = [
