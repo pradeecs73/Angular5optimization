@@ -12,6 +12,7 @@ import { LocalreferenceComponent } from './localreference/localreference.compone
 import { CorouselComponent } from './corousel/corousel.component';
 import { AuthGuard } from './auth-guard.service';
 import { DomoptimizeComponent } from './domoptimize/domoptimize.component';
+import {NestedcompComponent} from  './nestedcomp/nestedcomp.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
   { path: 'routeparametercomponent/:id', component: RoutingparametercomponentComponent },
   { path: 'observablemethod', component: ObservablemethodsComponent },
   { path: 'corousel', component: CorouselComponent },
+  { path: 'nestedcomponent', component: NestedcompComponent },
   { path: 'domoptimize', component: DomoptimizeComponent },
   { path: 'form', loadChildren: './formcomponent/formoptimize.module#FormoptimizeModule'},
   { path: 'localreference', component: LocalreferenceComponent },

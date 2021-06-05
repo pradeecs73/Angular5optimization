@@ -22,6 +22,7 @@ import { RoutingparametercomponentComponent } from './routingparametercomponent/
 import { ObservablemethodsComponent } from './observablemethods/observablemethods.component';
 import { LocalreferenceComponent } from './localreference/localreference.component';
 import { CorouselComponent } from './corousel/corousel.component';
+import {NestedcompComponent} from  './nestedcomp/nestedcomp.component';
 import { HelloComponent } from './hello/hello.component';
 import { Hello1Component } from './hello1/hello1.component';
 import { Hello2Component } from './hello2/hello2.component';
@@ -46,6 +47,7 @@ export function init_app(configservice: configservice) {
     ObservablemethodsComponent,
     LocalreferenceComponent,
     CorouselComponent,
+    NestedcompComponent,
     DomoptimizeComponent,
     ChangeTextDirective,
     HelloComponent,

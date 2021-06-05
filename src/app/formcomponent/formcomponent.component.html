@@ -1,60 +1,65 @@
-<div class="container-fluid" style="text-align:center">
+<div class="container-fluid offset-md-4" style="width:500px" >
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-  
-      <div class="form-group">
-        <label for="username">username</label>
-        <input type="text" name="username" ngModel required #username="ngModel" [pattern]="userNamePattern" />
+
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username"  ngModel required  #username="ngModel" [pattern]="userNamePattern"  />
        <!-- <p *ngIf="username.invalid && username.touched">please enter the proper username</p>-->
-         <div  *ngIf="username.touched && username.invalid">
-          <div *ngIf="username.errors.required" style="color:red">username is required</div>
-          <div *ngIf="username.errors?.pattern" style="color:red">please enter the proper username</div>
-        </div>
+       <div  *ngIf="username.touched && username.invalid">
+        <div *ngIf="username.errors.required" style="color:red">username is required</div>
+        <div *ngIf="username.errors?.pattern" style="color:red">please enter the proper username</div>
       </div>
-  
+    </div>
 
-      <div class="form-group">
-        <label for="password">password</label>
-        <input type="password" name="password" ngModel required #password="ngModel" />
-        <!--<p *ngIf="!password.valid && password.touched">please enter the proper password</p>-->
-        <div *ngIf="password.touched && password.invalid">
-          <div *ngIf="password.errors.required" style="color:red">password is required</div>
-        </div>
+    <div class="form-group">
+      <label>password</label>
+      <input type="password" class="form-control" name="password" ngModel required #password="ngModel" />
+      <!--<p *ngIf="!password.valid && password.touched">please enter the proper password</p>-->
+      <div *ngIf="password.touched && password.invalid">
+        <div *ngIf="password.errors.required" style="color:red">password is required</div>
       </div>
-   
+    </div>
 
+   <div> 
+      <label>school</label><br>
+        <label class="radio-inline">
+          <input type="radio" name="school" [(ngModel)]="school" value="private" />priavte
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="school" [(ngModel)]="school" value="government" />government
+        </label>
+    </div> 
 
-      <div class="form-group">
-        <label for="school">School</label>
-        <input type="radio" name="school" [(ngModel)]="school" value="private" />priavte
-        <input type="radio" name="school" [(ngModel)]="school" value="government" />government
-      </div>
+    <div class="mb-3">
+      <label>company</label><br>
+      <ng-container *ngFor="let company of companyarray; let i = index">
+        <span style="margin-left:25px">
+          <input type="checkbox" class="form-check-input" [value]="company.value" name="{{ company.companyname }}" [(ngModel)]="company.checked" />
+           <label class="form-check-label"> {{ company.value }}</label>
+        </span>    
+      </ng-container>
+    </div>
 
-
-      <div class="form-group">
-        <label for="company">company</label>
-        <span *ngFor="let company of companyarray; let i = index">
-          <input type="checkbox" [value]="company.value" name="{{ company.companyname }}" [(ngModel)]="company.checked" />{{
-            company.value
-          }}
-        </span>
-      </div>
-
-
-      <div class="form-group">
-        <label for="passanger">Passenger</label>
-        <select name="passagnername" [(ngModel)]="passengertitle" #passagnername="ngModel">
-          <option value="">select title</option>
+    <div class="form-group">
+      <label >Passenger</label>
+      <select class="form-control"  name="passagnername" [(ngModel)]="passengertitle" #passagnername="ngModel">
+        <option value="">select title</option>
           <option *ngFor="let title of titleArray" [value]="title.value">
             {{ title.text }}
           </option>
-        </select>
-      </div>
+      </select>
+    </div>
 
+    
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" >submit</button>
+    </div>
 
+    
 
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary" >submit</button>
-      </div>
+  </form>  
 
-  </form>
 </div>
+
+
+

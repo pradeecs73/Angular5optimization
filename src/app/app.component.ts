@@ -1,6 +1,4 @@
-import { Component ,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
-import { HelloComponent } from './hello/hello.component';
-import { Hello1Component } from './hello1/hello1.component';
+import { Component ,OnInit} from '@angular/core';
 import {Event,NavigationEnd,NavigationStart,Router} from '@angular/router';
 
 
@@ -9,13 +7,9 @@ import {Event,NavigationEnd,NavigationStart,Router} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit{
+
+export class AppComponent implements OnInit{
   title = 'app';
-  name:any = 'Angular';
-  child2data:any="mydata";
-  @ViewChild(HelloComponent) hello: HelloComponent;
-  @ViewChild('pRef') pRef: ElementRef;
-  @ViewChild(Hello1Component) hello1: Hello1Component;
 
   constructor(private router: Router) {
          router.events.subscribe((routerEvent:Event)=>{
@@ -31,19 +25,14 @@ export class AppComponent implements AfterViewInit{
            
         
          });
-  }
+    }
+
+    ngOnInit(){
+
+     }
 
 
 
-  ngAfterViewInit(){
-    console.log(this.pRef.nativeElement.innerHTML); 
-    console.log(this.hello.name);
-    console.log(this.hello1.child2data)
-  }
 
-  myChildData(childdata: String) {
-      this.name=childdata;
-      this.child2data=childdata;
-  }
 
 }
