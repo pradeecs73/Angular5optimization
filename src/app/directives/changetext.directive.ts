@@ -13,7 +13,15 @@ export class ChangeTextDirective {
 
    @HostBinding('style.backgroundColor') color;
 
-   @HostListener('click') onclick() {
+   /*@HostListener('click') onclick() {
       this.color = "red";			    	
+   }*/
+
+   @HostListener('click',['$event.target']) 
+
+   public onClick(target){
+      console.log(target);
+      this.color = "red";	
    }
+
 }

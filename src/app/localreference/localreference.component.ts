@@ -17,6 +17,6 @@ export class LocalreferenceComponent implements OnInit {
   }
 
   viewchild() {
-    console.log(this.serverviewchildinputelement.nativeElement.value);
+    console.log(this.serverviewchildinputelement.nativeElement.style.display);
   }
 }
