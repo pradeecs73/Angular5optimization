@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { configservice } from './../config.service';
+ import { Component, OnInit } from '@angular/core';
+  import { configservice } from './../config.service';
 
 @Component({
   selector: 'app-dashboard',
